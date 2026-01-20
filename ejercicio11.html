@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes</title>
+    <style>
+        .imagen-galeria {
+            display: inline-block;
+            margin: 10px;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+        .imagen-galeria img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Galería de Imágenes</h1>
+    <section>
+        <div id="imagen1" class="imagen-galeria" tabindex="0" role="button" aria-label="Imagen 1: Paisaje montañoso" data-imagen-id="1" data-descripcion="Un hermoso paisaje montañoso con nieve en las cimas.">
+            <img src="montaña1.jpg" alt="Imagen 1" title="Un hermoso paisaje montañoso con nieve en las cimas.">
+        </div>
+        <div id="imagen2" class="imagen-galeria" tabindex="0" role="button" aria-label="Imagen 2: Playa tropical" data-imagen-id="2" data-descripcion="Una playa tropical con palmeras y agua cristalina.">
+            <img src="montaña2.jpg" alt="Imagen 2" title="Una playa tropical con palmeras y agua cristalina.">
+        </div>
+        <div id="imagen3" class="imagen-galeria" tabindex="0" role="button" aria-label="Imagen 3: Ciudad urbana" data-imagen-id="3" data-descripcion="Vista panorámica de una ciudad urbana con rascacielos.">
+            <img src="montaña3.webp" alt="Imagen 3" title="Vista panorámica de una ciudad urbana con rascacielos.">
+        </div>
+        <div id="imagen4" class="imagen-galeria" tabindex="0" role="button" aria-label="Imagen 4: Bosque otoñal" data-imagen-id="4" data-descripcion="Un bosque en otoño con hojas amarillas y rojas.">
+            <img src="montaña4.webp" alt="Imagen 4" title="Un bosque en otoño con hojas amarillas y rojas.">
+        </div>
+    </section>
+
+</body>
+</html>
