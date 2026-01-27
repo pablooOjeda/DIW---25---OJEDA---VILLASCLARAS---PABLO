@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Productos</title>
+    <style>
+        :root {
+            --color-primario: #007bff;
+            --color-secundario: #6c757d;
+            --color-fondo: #f8f9fa;
+            --color-texto: #212529;
+            --espacio-base: 16px;
+            --precio-original: 20;
+            --precio-descuento: 15;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: var(--espacio-base);
+            background-color: #e9ecef;
+        }
+
+        .productos {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .productos li {
+            padding: var(--espacio-base);
+            margin-bottom: var(--espacio-base);
+            border-radius: 8px;
+            transition: box-shadow 0.3s;
+        }
+
+        .productos li:nth-child(odd) {
+            background-color: var(--color-fondo);
+        }
+
+        .productos li:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        .productos li:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .productos li:not(.agotado) {
+            opacity: 1;
+        }
+
+        .productos li.agotado {
+            opacity: 0.6;
+            position: relative;
+        }
+
+        .productos li.agotado::after {
+            content: "Agotado";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--color-secundario);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+        }
+
+        .productos li.nuevo::before {
+            content: "Nuevo";
+            background-color: var(--color-primario);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-right: var(--espacio-base);
+        }
+
+        .descripcion::first-line {
+            font-weight: bold;
+            color: var(--color-primario);
+        }
+
+        .precio {
+            font-size: 1.2em;
+            color: var(--color-texto);
+        }
+
+        .precio-original {
+            text-decoration: line-through;
+            color: var(--color-secundario);
+        }
+
+        .precio-descuento {
+            color: var(--color-primario);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+    <ul class="productos">
+        <li class="disponible">
+            <h3>Producto 1</h3>
+            <p class="descripcion">Este es un producto disponible con descripción detallada. Incluye características importantes y beneficios.</p>
+            <span class="precio precio-original">$<span style="content: var(--precio-original)">20</span></span>
+            <span class="precio precio-descuento">$<span style="content: var(--precio-descuento)">15</span></span>
+        </li>
+        <li class="agotado">
+            <h3>Producto 2</h3>
+            <p class="descripcion">Producto agotado temporalmente. Descripción completa del artículo y sus especificaciones.</p>
+            <span class="precio">$20</span>
+        </li>
+        <li class="nuevo">
+            <h3>Producto 3</h3>
+            <p class="descripcion">Nuevo lanzamiento en la tienda. Descubre las últimas innovaciones y mejoras.</p>
+            <span class="precio precio-descuento">$15</span>
+        </li>
+        <li class="disponible">
+            <h3>Producto 4</h3>
+            <p class="descripcion">Otro producto disponible con oferta especial. Detalles sobre el descuento aplicado.</p>
+            <span class="precio precio-original">$20</span>
+            <span class="precio precio-descuento">$15</span>
+        </li>
+    </ul>
+</body>
+</html>

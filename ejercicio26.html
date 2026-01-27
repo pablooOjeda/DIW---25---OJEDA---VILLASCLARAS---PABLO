@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <style>
+        :root {
+            --color-primario: #007bff;
+            --color-secundario: #6c757d;
+            --color-fondo: #f8f9fa;
+            --color-texto: #212529;
+            --color-error: #dc3545;
+            --color-success: #28a745;
+            --font-size-base: 16px;
+            --espacio-base: 16px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: var(--espacio-base);
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: var(--color-fondo);
+            padding: var(--espacio-base);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--color-texto);
+        }
+
+        label.required::after {
+            content: "*";
+            color: var(--color-error);
+            margin-left: 4px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: var(--espacio-base);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: var(--font-size-base);
+            box-sizing: border-box;
+        }
+
+        input:focus, textarea:focus {
+            border-color: var(--color-primario);
+            background-color: #e3f2fd;
+            outline: none;
+        }
+
+        input:invalid, textarea:invalid {
+            border-color: var(--color-error);
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: var(--color-secundario);
+            font-style: italic;
+        }
+
+        ::selection {
+            background-color: var(--color-primario);
+            color: white;
+        }
+
+        button {
+            background-color: var(--color-secundario);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: var(--font-size-base);
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        form:valid button {
+            background-color: var(--color-success);
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="nombre" class="required">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
+
+        <label for="email" class="required">Correo electrónico</label>
+        <input type="email" id="email" name="email" required placeholder="Ingresa tu correo electrónico">
+
+        <label for="mensaje" class="required">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje" rows="5"></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

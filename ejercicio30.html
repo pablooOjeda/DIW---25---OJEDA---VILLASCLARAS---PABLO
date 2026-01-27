@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button { 
+            width: 100 px;
+            height: 45 px;
+            padding: 10 px 10 px 10 px 10 px;
+            margin-top: 20 px;
+            margin-left: auto;
+            margin-right: auto;
+            border: none;
+            border-radius: 50 px;
+        }
+        button::after {
+            content: "4";
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            height: 15 px;
+            width: 15 px;
+            top: 0px;
+            margin-left: 10 px;
+        }
+        #button--primary {
+            background-color: rgb(0, 174, 255);
+            color: white;
+        }
+        #button--secondary {
+            background-color: rgb(108, 117, 125);
+            color: white;
+        }
+        #button--success {
+            background-color: rgb(40, 167, 69);
+            color: white;
+        }
+        #button--danger {
+            background-color: rgb(220, 53, 69);
+            color: white;
+        }
+        #button--warning {
+            background-color: rgb(255, 193, 7);
+            color: black;
+        }
+        #button--info {
+            background-color: rgb(23, 162, 184);
+            color: white;
+        }
+        #button--light {
+            background-color: rgb(248, 249, 250);
+            color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <button id="button--primary">Primary</button>
+    <button id="button--secondary">Secondary</button>
+    <button id="button--success">Success</button>
+    <button id="button--danger">Danger</button>
+    <button id="button--warning">Warning</button>
+    <button id="button--info">Info</button>
+    <button id="button--light">Light</button>
+    <button id="button--dark">Dark</button>
+
+</body>
+</html>
