@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajas Apiladas con Z-Index</title>
+    <style>
+        .contenedor {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            margin: 50px auto;
+        }
+        .caja {
+            position: absolute;
+            width: 200px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+        }
+        .caja1 {
+            background-color: red;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+        .caja2 {
+            background-color: blue;
+            top: 80px;
+            left: 100px;
+            z-index: 2;
+        }
+        .caja3 {
+            background-color: green;
+            top: 140px;
+            left: 180px;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Cajas Apiladas</h1>
+    <div class="contenedor">
+        <div class="caja caja1"></div>
+        <div class="caja caja2"></div>
+        <div class="caja caja3"></div>
+    </div>
+</body>
+</html>

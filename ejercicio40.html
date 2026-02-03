@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabla de Precios</title>
+    <style>
+      :root {
+        --gap: 20px;
+        --primary: #2b8a9e;
+      }
+
+      * { box-sizing: border-box; }
+      html, body { height: 100%; margin: 0; }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        color: #222;
+      }
+
+      .wrap {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 0 16px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .planes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap);
+        align-items: stretch;
+      }
+
+      .plan {
+        flex: 1 1 calc(33.333% - (var(--gap) * 2 / 3));
+        background: #fff;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .plan:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+      }
+
+      .plan.featured {
+        border-color: var(--primary);
+        background: linear-gradient(135deg, #f0f9fb 0%, #fff 100%);
+        transform: scale(1.02);
+      }
+
+      .plan.featured:hover {
+        transform: scale(1.02) translateY(-4px);
+      }
+
+      .plan-title {
+        font-size: 1.3rem;
+        margin: 0 0 12px 0;
+        color: var(--primary);
+        font-weight: 700;
+      }
+
+      .plan-price {
+        font-size: 2rem;
+        margin: 0 0 8px 0;
+        color: #222;
+        font-weight: 700;
+      }
+
+      .plan-price .currency {
+        font-size: 1.2rem;
+      }
+
+      .plan-price .period {
+        font-size: 0.8rem;
+        color: #888;
+      }
+
+      .plan-features {
+        flex: 1;
+        margin: 16px 0;
+        padding: 16px 0;
+        border-top: 1px solid #e6e6e6;
+        border-bottom: 1px solid #e6e6e6;
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .plan-features li {
+        padding: 8px 0;
+        color: #555;
+        position: relative;
+        padding-left: 24px;
+      }
+
+      .plan-features li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--primary);
+        font-weight: 700;
+      }
+
+      .plan-btn {
+        padding: 12px 16px;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+
+      .plan .plan-btn {
+        background: #e0e0e0;
+        color: #222;
+      }
+
+      .plan .plan-btn:hover {
+        background: #d0d0d0;
+      }
+
+      .plan.featured .plan-btn {
+        background: var(--primary);
+        color: #fff;
+      }
+
+      .plan.featured .plan-btn:hover {
+        background: #1f5f6f;
+      }
+
+      @media (max-width: 900px) {
+        .plan { flex: 1 1 calc(50% - var(--gap)); }
+        .plan.featured { transform: scale(1); }
+        .plan.featured:hover { transform: translateY(-4px); }
+      }
+
+      @media (max-width: 520px) {
+        .plan { flex: 1 1 100%; }
+        .plan.featured { transform: scale(1); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Nuestros Planes</h1>
+
+      <div class="planes">
+        <div class="plan">
+          <h2 class="plan-title">Básico</h2>
+          <div class="plan-price">
+            <span class="currency">€</span>9<span class="period">/mes</span>
+          </div>
+          <ul class="plan-features">
+            <li>5 proyectos</li>
+            <li>2 GB almacenamiento</li>
+            <li>Soporte por email</li>
+          </ul>
+          <button class="plan-btn">Contratar</button>
+        </div>
+
+        <div class="plan featured">
+          <h2 class="plan-title">Profesional</h2>
+          <div class="plan-price">
+            <span class="currency">€</span>29<span class="period">/mes</span>
+          </div>
+          <ul class="plan-features">
+            <li>Proyectos ilimitados</li>
+            <li>100 GB almacenamiento</li>
+            <li>Soporte prioritario</li>
+            <li>Análisis avanzado</li>
+          </ul>
+          <button class="plan-btn">Contratar Ahora</button>
+        </div>
+
+        <div class="plan">
+          <h2 class="plan-title">Empresa</h2>
+          <div class="plan-price">
+            <span class="currency">€</span>99<span class="period">/mes</span>
+          </div>
+          <ul class="plan-features">
+            <li>Todo incluido</li>
+            <li>Almacenamiento ilimitado</li>
+            <li>Soporte 24/7</li>
+            <li>API personalizada</li>
+          </ul>
+          <button class="plan-btn">Contratar</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

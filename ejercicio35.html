@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Versión mínima</title>
+    <style>
+      /* Variables */
+      :root {
+        --nav-h: 50px;
+        --gap: 12px;
+      }
+
+      /* Reseteo y layout básico */
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        padding-top: var(--nav-h);
+        background: #f7f7f7;
+      }
+
+      /* Menú fijo */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: var(--nav-h);
+        background: #222;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: var(--gap);
+        padding: 0 12px;
+        box-sizing: border-box;
+      }
+
+      .brand {
+        font-weight: 700;
+      }
+
+      /* Banner sticky (permanece visible tras el menú) */
+      .banner {
+        position: sticky;
+        top: var(--nav-h);
+        background: #ffecb3;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+      }
+
+      /* Tarjetas flotantes (float) */
+      .tarjetas {
+        padding: 12px;
+        overflow: hidden; /* limpia floats automáticamente */
+      }
+
+      .tarjeta {
+        float: left;
+        width: 30%;
+        margin: 1.5%;
+        height: 100px;
+        background: #eee;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+
+      /* Tarjeta destacada que se superpone */
+      .tarjeta.destacada {
+        position: relative;
+        top: -12px;
+        z-index: 5;
+        background: #fff;
+        border-color: #999;
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      /* Contenedor desplazable */
+      .scroll {
+        width: 90%;
+        height: 150px;
+        margin: 12px auto;
+        border: 1px solid #ccc;
+        overflow: auto;
+        padding: 6px;
+        box-sizing: border-box;
+        background: #fff;
+      }
+
+      .box {
+        display: inline-block;
+        width: 100px;
+        height: 70px;
+        margin: 6px;
+        background: #9ad0f5;
+        border-radius: 4px;
+      }
+
+      /* clases que ocultan visualmente pero mantienen el espacio */
+      .box.hidden { visibility: hidden; }
+      .box.invisible { opacity: 0; }
+
+      /* Responsive mínimo */
+      @media (max-width: 600px) {
+        .tarjeta { width: 96%; margin: 2% 2%; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="brand">MiSitio</div>
+    </nav>
+
+    <div class="banner">Banner (sticky)</div>
+
+    <main>
+      <div class="tarjetas">
+        <div class="tarjeta"></div>
+        <div class="tarjeta destacada"></div>
+        <div class="tarjeta"></div>
+        <div class="clear"></div>
+      </div>
+
+      <div class="scroll">
+        <div>
+          <div class="box" style="background:#ff8a80"></div>
+          <div class="box" style="background:#ffd180"></div>
+          <div class="box hidden"></div>
+          <div class="box" style="background:#c8e6c9"></div>
+          <div class="box invisible"></div>
+          <div class="box" style="background:#b3e5fc"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+  </html>

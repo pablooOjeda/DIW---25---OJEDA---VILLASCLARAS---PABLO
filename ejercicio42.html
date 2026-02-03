@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Layout Flexbox 2 columnas</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { height: 100%; margin: 0; }
+
+      body {
+        display: flex;
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+        background: #0e7c74;
+        padding: 20px;
+        margin: 0;
+        gap: 20px;
+      }
+
+      .col-left {
+        flex: 2;
+        padding: 24px;
+        background: white;
+        border: 1px solid lightgray;
+      }
+
+      .col-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .row {
+        flex: 1;
+        padding: 24px;
+        background: white;
+        border: 1px solid lightgray;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      p {
+        margin: 8px 0 0 0;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="col-left">
+      <h1>Columna Izquierda</h1>
+      <p>Esta es la columna izquierda que ocupa el 66% del ancho (relación 2:1).</p>
+    </div>
+
+    <div class="col-right">
+      <div class="row">
+        <h1>Fila 1</h1>
+        <p>Primera fila de la columna derecha.</p>
+      </div>
+
+      <div class="row">
+        <h1>Fila 2</h1>
+        <p>Segunda fila de la columna derecha.</p>
+      </div>
+    </div>
+  </body>
+</html>

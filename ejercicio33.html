@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenedor Desplazable</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .contenedor-desplazable {
+            width: 600px;
+            height: 400px;
+            border: 3px solid #333;
+            overflow: auto;
+            background-color: #f9f9f9;
+            margin: 20px auto;
+        }
+        .contenido {
+            padding: 20px;
+            width: 1000px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .contenido h2 {
+            margin-top: 0;
+            font-size: 28px;
+        }
+        .seccion {
+            margin-bottom: 40px;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .seccion p {
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contenedor Desplazable</h1>
+    <p style="text-align: center; color: #666;">Desplázate horizontal y verticalmente usando las barras de scroll</p>
+    
+    <div class="contenedor-desplazable">
+        <div class="contenido">
+            <h2>Contenido Desplazable</h2>
+            
+            <div class="seccion">
+                <h3>Sección 1: Introducción</h3>
+                <p>Este es un contenedor con barras de scroll horizontales y verticales. El contenedor tiene un ancho de 600px y una altura de 400px, pero el contenido es más grande, lo que genera las barras de desplazamiento.</p>
+                <p>Utiliza la propiedad CSS <strong>overflow: auto</strong> para mostrar las barras de scroll solo cuando sea necesario.</p>
+            </div>
+
+            <div class="seccion">
+                <h3>Sección 2: Contenido Horizontal</h3>
+                <p>El contenido interno tiene un ancho de 1000px, lo que es mayor que el ancho del contenedor (600px). Esto genera una barra de scroll horizontal.</p>
+                <p>También hay suficiente contenido vertical para generar una barra de scroll vertical.</p>
+            </div>
+
+            <div class="seccion">
+                <h3>Sección 3: Más Contenido</h3>
+                <p>Puedes desplazarte en ambas direcciones para ver todo el contenido. Las barras de scroll aparecen automáticamente cuando el contenido excede las dimensiones del contenedor.</p>
+            </div>
+
+            <div class="seccion">
+                <h3>Sección 4: Ejemplo Práctico</h3>
+                <p>Este tipo de contenedores desplazables son útiles para mostrar tablas grandes, listas extensas o cualquier contenido que exceda el espacio disponible en la pantalla.</p>
+                <p>Los usuarios pueden navegar fácilmente a través del contenido sin necesidad de JavaScript.</p>
+            </div>
+
+            <div class="seccion">
+                <h3>Sección 5: Propiedades de Overflow</h3>
+                <p><strong>overflow: auto</strong> - Muestra barras de scroll solo cuando sea necesario.</p>
+                <p><strong>overflow: scroll</strong> - Siempre muestra las barras, incluso si no hay contenido adicional.</p>
+                <p><strong>overflow: hidden</strong> - Oculta el contenido que excede el contenedor.</p>
+                <p><strong>overflow: visible</strong> - Muestra el contenido fuera del contenedor.</p>
+            </div>
+
+            <div class="seccion">
+                <h3>Sección 6: Final</h3>
+                <p>Este es el final del contenido. Como puedes ver, el contenedor se desplaza tanto horizontal como verticalmente para acomodarse al contenido más grande.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

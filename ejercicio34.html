@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenedor Desplazable</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .contenedor-desplazable {
+            width: 600px;
+            height: 400px;
+            border: 3px solid #333;
+            overflow: auto;
+            background-color: #f9f9f9;
+            margin: 20px auto;
+        }
+        .contenido {
+            padding: 20px;
+            width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .caja {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="contenedor-desplazable">
+        <div class="contenido">
+            <div class="caja caja1"></div>
+            <div class="caja caja2"></div>
+            <div class="caja caja3"></div>
+            <div class="caja caja4"></div>
+            <div class="caja caja5"></div>
+            <div class="caja caja6"></div>
+            <div class="caja caja7"></div>
+            <div class="caja caja8"></div>
+            <div class="caja caja1"></div>
+            <div class="caja caja2"></div>
+            <div class="caja caja3"></div>
+            <div class="caja caja4"></div>
+            <div class="caja caja5"></div>
+            <div class="caja caja6"></div>
+            <div class="caja caja7"></div>
+            <div class="caja caja8"></div>
+        </div>
+    </div>
+</body>
+</html>
