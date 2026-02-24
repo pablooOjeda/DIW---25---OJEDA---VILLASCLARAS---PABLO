@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 45</title>
+  <style>
+    .contenedor {
+      width: 550px;
+      display: grid;
+      grid-template-columns: 100px 150px 150px;
+      grid-template-rows: auto auto auto;
+      gap: 1px;
+      background-color: white; 
+      margin: 40px auto;
+    }
+
+    .celda {
+      background-color: #6f818c;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+    }
+
+    .celda1 {
+      grid-column: 1 / -1; 
+    }
+
+    .celda2 {
+      grid-row: 2 / 4; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <div class="celda celda1">celda 1</div>
+    <div class="celda celda2">celda 2</div>
+    <div class="celda">celda 3</div>
+    <div class="celda">celda 4</div>
+    <div class="celda">celda 5</div>
+    <div class="celda">celda 6</div>
+  </div>
+
+</body>
+</html>

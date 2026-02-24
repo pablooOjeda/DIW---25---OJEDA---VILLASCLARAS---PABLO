@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            gap: 1px;
+            height: 200px;
+            grid-template-columns: repeat(2, 150px);
+            text-align: center;
+            justify-content: center;
+        }
+
+        .container div{
+            background-color: grey;
+            color: white;
+        }
+        .celda2{
+            grid-row: 2/3;
+        }
+        .celda3{
+            grid-row: 3/3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>celda1</div>
+        <div class="celda2">celda2</div>
+        <div class="celda3">celda3</div>
+        <div>celda4</div>
+        <div>celda5</div>
+        <div>celda6</div>
+    </div>
+</body>
+</html>

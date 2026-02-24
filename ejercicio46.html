@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            gap: 1px;
+            grid-template-areas:
+            "celda1 celda1 celda1"
+            "celda2 celda3 celda4"
+            "celda2 celda5 celda6";
+            text-align: center;
+            width: 400px;
+            height: 15px;
+
+        }
+        .celda1{
+            grid-area: celda1;
+        }
+        .celda2{
+            grid-area: celda2;
+        }
+        .celda3{
+            grid-area: celda3;
+        }
+        .celda4{
+            grid-area: celda4;
+        }
+        .celda5{
+            grid-area: celda5;
+        }
+        .celda6{
+            grid-area: celda6;
+        }
+        .container div{
+            background-color: #6f818c;
+            color: white;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="celda1">celda 1</div>
+        <div class="celda2">celda 2</div>
+        <div class="celda3">celda 3</div>
+        <div class="celda4">celda 4</div>
+        <div class="celda5">celda 5</div>
+        <div class="celda6">celda 6</div>
+    </div>
+    
+</body>
+</html>

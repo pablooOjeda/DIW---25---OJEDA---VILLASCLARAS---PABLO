@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 44</title>
+  <style>
+    .tabla {
+      width: 600px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;                 
+      background-color: white;  
+      margin: 40px auto;
+    }
+
+    .celda {
+      background-color: #6f818c;
+      color: white;
+      text-align: center;       
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .celda1 {
+      grid-column: 1 / -1;      
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tabla">
+    <div class="celda celda1">celda 1</div>
+    <div class="celda">celda 2</div>
+    <div class="celda">celda 3</div>
+    <div class="celda">celda 4</div>
+    <div class="celda">celda 5</div>
+    <div class="celda">celda 6</div>
+    <div class="celda">celda 7</div>
+  </div>
+
+</body>
+</html>
